@@ -1,0 +1,49 @@
+# F1 2026 ドライバーズチャンピオンシップ
+# 2026-10-11 シンガポールGP終了時点の事前条件（これを正とする）
+season: 2026
+as_of:
+  date: "2026-10-11"
+  after_race: "シンガポールGP"
+
+standings:
+  - { position: 1,  driver: "Kimi Antonelli",    team: "Mercedes",     points: 340, wins: 8 }
+  - { position: 2,  driver: "George Russell",    team: "Mercedes",     points: 238, wins: 3 }
+  - { position: 3,  driver: "Lewis Hamilton",    team: "Ferrari",      points: 229, wins: 1 }
+  - { position: 4,  driver: "Max Verstappen",    team: "Red Bull",     points: 221, wins: 2 }
+  - { position: 5,  driver: "Charles Leclerc",   team: "Ferrari",      points: 215, wins: 1 }
+  - { position: 6,  driver: "Lando Norris",      team: "McLaren",      points: 201, wins: 2 }
+  - { position: 7,  driver: "Oscar Piastri",     team: "McLaren",      points: 138, wins: 0 }
+  - { position: 8,  driver: "Isack Hadjar",      team: "Red Bull",     points: 97,  wins: 0 }
+  - { position: 9,  driver: "Liam Lawson",       team: "Racing Bulls", points: 75,  wins: 0 }
+  - { position: 10, driver: "Pierre Gasly",      team: "Alpine",       points: 41,  wins: 0 }
+  - { position: 11, driver: "Arvid Lindblad",    team: "Racing Bulls", points: 38,  wins: 0 }
+  - { position: 12, driver: "Franco Colapinto",  team: "Alpine",       points: 27,  wins: 0 }
+  - { position: 13, driver: "Oliver Bearman",    team: "Haas",         points: 23,  wins: 0 }
+  - { position: 14, driver: "Nico Hulkenberg",   team: "Audi",         points: 13,  wins: 0 }
+  - { position: 15, driver: "Gabriel Bortoleto", team: "Audi",         points: 10,  wins: 0 }
+  - { position: 16, driver: "Esteban Ocon",      team: "Haas",         points: 7,   wins: 0 }
+  - { position: 17, driver: "Fernando Alonso",   team: "Aston Martin", points: 7,   wins: 0 }
+  - { position: 18, driver: "Carlos Sainz",      team: "Williams",     points: 7,   wins: 0 }
+  - { position: 19, driver: "Alex Albon",        team: "Williams",     points: 5,   wins: 0 }
+# 20位以下は5点以下でタイトルの可能性がないため省略
+
+remaining_races:
+  - { round: 1, name: "アメリカGP",       location: "オースティン", date: "2026-10-25", sprint: false }
+  - { round: 2, name: "メキシコシティGP", location: "メキシコシティ", date: "2026-11-01", sprint: false }
+  - { round: 3, name: "サンパウロGP",     location: "サンパウロ",   date: "2026-11-08", sprint: false }
+  - { round: 4, name: "ラスベガスGP",     location: "ラスベガス",   date: "2026-11-21", sprint: false }
+  - { round: 5, name: "カタールGP",       location: "ルサイル",     date: "2026-11-29", sprint: false }
+  - { round: 6, name: "アブダビGP",       location: "ヤス・マリーナ", date: "2026-12-06", sprint: false }
+
+points_system:
+  race: [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]   # P1..P10、11位以下は0
+  sprint: [8, 7, 6, 5, 4, 3, 2, 1]           # 参考（残りレースには無い）
+  fastest_lap: 0                             # ファステストラップポイントなし
+
+assumptions:
+  - "残り6戦はすべてフルポイントで成立する"
+  - "残り6戦にスプリントはない"
+  - "ファステストラップポイントはない"
+  - "同点の場合は優勝回数の多い方が上位"
+  - "優勝回数も同じ場合は2位回数以下の比較になるが、データが無いため「未確定」として扱う（確定とはみなさない）"
+  - "20位以下のドライバーは5点以下でタイトルの可能性がないため対象外"

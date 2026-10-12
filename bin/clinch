@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require_relative "../lib/f1_clinch"
+
+root = File.expand_path("..", __dir__)
+data = ARGV[0] || File.join(root, "data/season.yml")
+out_dir = ARGV[1] || File.join(root, "output")
+
+season = F1Clinch::Season.load(data)
+report = F1Clinch::Report.new(F1Clinch::Analysis.new(season).to_h)
+
+FileUtils.mkdir_p(out_dir)
+File.write(File.join(out_dir, "report.md"), report.markdown)
+File.write(File.join(out_dir, "result.json"), report.json + "\n")
+
+puts report.summary
+puts
+puts "出力: #{File.join(out_dir, 'report.md')}, #{File.join(out_dir, 'result.json')}"

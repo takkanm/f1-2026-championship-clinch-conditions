@@ -1,0 +1,5 @@
+require_relative "f1_clinch/season"
+require_relative "f1_clinch/rules"
+require_relative "f1_clinch/calculator"
+require_relative "f1_clinch/analysis"
+require_relative "f1_clinch/report"
