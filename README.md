@@ -41,6 +41,7 @@ ruby -Itest -e 'Dir["./test/*_test.rb"].sort.each { |f| require f }'
 | `lib/f1_clinch/report.rb` | Markdown / JSON / 標準出力の整形 |
 | `bin/clinch` | 実行エントリポイント |
 | `test/` | 単体テスト・検算値テスト・総当たり検証 |
+| `docs/prompt.md` | このプログラムを作成した最初のプロンプト（要件定義） |
 
 ## 定義
 
